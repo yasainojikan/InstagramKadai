@@ -6,8 +6,11 @@
 //  Copyright © 2019年 yasainojikan. All rights reserved.
 //
 
+import Firebase
+import FirebaseAuth
 import UIKit
 import ESTabBarController
+
 
 class ViewController: UIViewController {
     
@@ -16,6 +19,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         setupTab()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        currentUserがnilならログインしていない
+        if Auth.auth().currentUser == nil {
+//            ログインしていない時の処理
+            let loginViewController = self.storyboard?.instantiateViewController(withIdentifier: "Login")
+            self.present(loginViewController!, animated: true, completion: nil)
+        }
     }
     
     func setupTab() {
