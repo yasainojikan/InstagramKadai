@@ -33,15 +33,15 @@ class ViewController: UIViewController {
     }
     
     func setupTab() {
-        //        画像のファイル名を指定してESTabBarControllerを作成する
+        //  画像のファイル名を指定してESTabBarControllerを作成する
         let tabBarController: ESTabBarController! = ESTabBarController(tabIconNames: ["home", "camera", "setting"])
         
-        //        背景色、選択時の色を設定する
+        //  背景色、選択時の色を設定する
         tabBarController.selectedColor = UIColor(red:1.0, green: 0.44, blue: 0.11, alpha: 1)
         tabBarController.buttonsBackgroundColor = UIColor(red: 0.96, green: 0.91, blue: 0.87, alpha: 1)
         tabBarController.selectionIndicatorHeight = 3
         
-        //        作成したESTabBarControllerを親のViewController(self)に追加する.よくわからない
+        //  作成したESTabBarControllerを親のViewController(self)に追加する.よくわからない
         addChild(tabBarController)
         let tabBarView = tabBarController.view!
         tabBarView.translatesAutoresizingMaskIntoConstraints = false
