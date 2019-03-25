@@ -18,6 +18,8 @@
 		FA301EED22451D5C0086C008 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA301EEC22451D5C0086C008 /* ImageSelectViewController.swift */; };
 		FA301EEF22451D6B0086C008 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA301EEE22451D6B0086C008 /* PostViewController.swift */; };
 		FA301EF122451D7D0086C008 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA301EF022451D7D0086C008 /* SettingViewController.swift */; };
+		FA47C4D9224914EC00261AF9 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47C4D8224914EC00261AF9 /* Const.swift */; };
+		FA47C4DB22491A7000261AF9 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47C4DA22491A7000261AF9 /* PostData.swift */; };
 		FAB8F78B22465F110075AB4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAB8F78A22465F110075AB4D /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		FA301EEC22451D5C0086C008 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		FA301EEE22451D6B0086C008 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FA301EF022451D7D0086C008 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FA47C4D8224914EC00261AF9 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		FA47C4DA22491A7000261AF9 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		FAB8F78A22465F110075AB4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +106,8 @@
 				FA301EEC22451D5C0086C008 /* ImageSelectViewController.swift */,
 				FA301EEE22451D6B0086C008 /* PostViewController.swift */,
 				FA301EF022451D7D0086C008 /* SettingViewController.swift */,
+				FA47C4D8224914EC00261AF9 /* Const.swift */,
+				FA47C4DA22491A7000261AF9 /* PostData.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -240,10 +246,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA301EEF22451D6B0086C008 /* PostViewController.swift in Sources */,
+				FA47C4DB22491A7000261AF9 /* PostData.swift in Sources */,
 				FA301EE922451D3A0086C008 /* LoginViewController.swift in Sources */,
 				FA301ECD224519730086C008 /* ViewController.swift in Sources */,
 				FA301ECB224519730086C008 /* AppDelegate.swift in Sources */,
 				FA301EED22451D5C0086C008 /* ImageSelectViewController.swift in Sources */,
+				FA47C4D9224914EC00261AF9 /* Const.swift in Sources */,
 				FA301EF122451D7D0086C008 /* SettingViewController.swift in Sources */,
 				FA301EEB22451D4C0086C008 /* HomeViewController.swift in Sources */,
 			);

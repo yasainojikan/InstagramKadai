@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        // storyboardは重たいので、1ストーリーボードviewがひとつ
 //        currentUserがnilならログインしていない
         if Auth.auth().currentUser == nil {
 //            ログインしていない時の処理
