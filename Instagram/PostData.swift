@@ -26,7 +26,7 @@ class PostData: NSObject {
         // 投稿のID
         self.id = snapshot.key
         
-        // valueプロパティに入っているデータを取り出すインスタンス
+        // valueプロパティに入っているデータを取り出すインスタンスを定義
         let valueDictionary = snapshot.value as! [String: Any]
         
         // 画像

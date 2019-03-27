@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // storyboardは重たいので、1ストーリーボードviewがひとつ
 //        currentUserがnilならログインしていない
         if Auth.auth().currentUser == nil {
 //            ログインしていない時の処理
@@ -63,7 +62,7 @@ class ViewController: UIViewController {
         tabBarController.setView(homeViewController, at: 0)
         tabBarController.setView(settingViewController, at: 2)
         
-        //        真ん中のタブはボタンとして扱う
+        //        真ん中のタブはボタンとして扱う。hilightされるような設定
         tabBarController.highlightButton(at: 1)
         tabBarController.setAction({
             //            ボタンが押されたらImageViewContollerをモーダルで表示する
