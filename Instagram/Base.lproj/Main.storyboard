@@ -176,6 +176,49 @@
             </objects>
             <point key="canvasLocation" x="788" y="820"/>
         </scene>
+        <!--Comment View Controller-->
+        <scene sceneID="TaB-Ud-mao">
+            <objects>
+                <viewController storyboardIdentifier="Comment" id="Fzl-3a-I4o" customClass="commentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uE7-qG-N1y">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sAZ-Nl-EsU">
+                                <rect key="frame" x="10" y="120" width="748" height="804"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyJ-Ug-rDD">
+                                <rect key="frame" x="700" y="30" width="58" height="80"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="saveCommentButton:" destination="Fzl-3a-I4o" eventType="touchUpInside" id="fdV-1w-Qys"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RSo-sg-ong" firstAttribute="trailing" secondItem="sAZ-Nl-EsU" secondAttribute="trailing" constant="10" id="0Tk-rV-RW6"/>
+                            <constraint firstItem="sAZ-Nl-EsU" firstAttribute="top" secondItem="RSo-sg-ong" secondAttribute="top" constant="100" id="2du-Fd-U0i"/>
+                            <constraint firstItem="RSo-sg-ong" firstAttribute="bottom" secondItem="sAZ-Nl-EsU" secondAttribute="bottom" constant="100" id="FAD-va-mQM"/>
+                            <constraint firstItem="JyJ-Ug-rDD" firstAttribute="top" secondItem="RSo-sg-ong" secondAttribute="top" constant="10" id="JhK-9g-XII"/>
+                            <constraint firstItem="JyJ-Ug-rDD" firstAttribute="leading" secondItem="RSo-sg-ong" secondAttribute="leading" constant="700" id="dIt-JS-DnU"/>
+                            <constraint firstItem="sAZ-Nl-EsU" firstAttribute="leading" secondItem="RSo-sg-ong" secondAttribute="leading" constant="10" id="h3O-2d-7IJ"/>
+                            <constraint firstItem="RSo-sg-ong" firstAttribute="trailing" secondItem="JyJ-Ug-rDD" secondAttribute="trailing" constant="10" id="mee-uY-a0w"/>
+                            <constraint firstItem="sAZ-Nl-EsU" firstAttribute="top" secondItem="JyJ-Ug-rDD" secondAttribute="bottom" constant="10" id="vSk-wv-hPZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RSo-sg-ong"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentEditTextField" destination="sAZ-Nl-EsU" id="eC7-bn-jBJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OsO-Vo-87J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="1487"/>
+        </scene>
         <!--Post View Controller-->
         <scene sceneID="j75-Ke-7p0">
             <objects>
