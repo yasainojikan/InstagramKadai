@@ -13,24 +13,22 @@ import FirebaseDatabase
 
 class commentViewController: UIViewController {
     
-    var postData2: [PostData] = []
-
-
+    var postData: PostData!
+   
     @IBOutlet weak var commentEditTextField: UITextField!
-    
-    @IBAction func saveCommentButton(_ sender: Any) {
-        
-        dismiss(animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         commentEditTextField.text = postData.comment
+        
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func saveCommentButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
