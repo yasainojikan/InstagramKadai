@@ -20,6 +20,7 @@ class commentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         commentEditTextField.text = postData.comment
         
         // Do any additional setup after loading the view.

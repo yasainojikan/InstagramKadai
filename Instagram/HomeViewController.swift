@@ -135,7 +135,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let postData = postArray[indexPath!.row]
     
         // commentViewControllerに移動する
-        let commentViewController: UIViewController! = self.storyboard?.instantiateViewController(withIdentifier: "Comment")
+        let commentViewController: commentViewController! = self.storyboard?.instantiateViewController(withIdentifier: "Comment") as? commentViewController
         commentViewController.postData = postData
         self.present(commentViewController!, animated: true, completion: nil)
     }
