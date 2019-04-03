@@ -23,10 +23,18 @@ class commentViewController: UIViewController {
         
         commentEditTextField.text = postData.comment
         
+        
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func saveCommentButton(_ sender: Any) {
+        // textFieldに表示されているコメントを上書き保存する
+        
+        let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
+        let postComment = ["comment": commentEditTextField.text!]
+        postRef.updateChildValues(postComment)
+        
         dismiss(animated: true, completion: nil)
     }
     

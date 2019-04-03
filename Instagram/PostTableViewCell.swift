@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class PostTableViewCell: UITableViewCell {
 
@@ -48,7 +50,13 @@ class PostTableViewCell: UITableViewCell {
         } else {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
-        }        
+        }
+        
+        let comment = postData.comment
+        if comment != nil {
+        let commentName = Auth.auth().currentUser!.displayName
+            commentLabel.text = commentName! + ":" + comment!
+        }
     }
 }
 
