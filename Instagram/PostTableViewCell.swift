@@ -54,8 +54,11 @@ class PostTableViewCell: UITableViewCell {
         
         let comment = postData.comment
         if comment != nil {
-        let commentName = Auth.auth().currentUser!.displayName
-            commentLabel.text = commentName! + ":" + comment!
+            commentLabel.text = comment!
+            
+            
+        } else {
+            
         }
     }
 }
