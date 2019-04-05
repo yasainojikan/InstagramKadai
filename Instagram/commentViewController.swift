@@ -15,6 +15,8 @@ class commentViewController: UIViewController {
     
     var postData: PostData!
     
+    var displayComment: [String] = []
+    
     @IBOutlet weak var commentEditTextField: UITextField!
     
     override func viewDidLoad() {
@@ -31,13 +33,15 @@ class commentViewController: UIViewController {
         // textFieldに表示されているコメントを上書き保存する
         if commentEditTextField.text != "" {
             let submitName = Auth.auth().currentUser!.displayName!
-            if postData.comment != nil {
-            let displayComment =  postData.comment! + "\n" + submitName + ":" + commentEditTextField.text!
+            if postData.comment.isEmpty == false {
+            // let displayComment =  postData.comment! + "\n" + submitName + ":" + commentEditTextField.text!
+                displayComment.append("\(submitName + ":" + commentEditTextField.text!)" + "\n")
             let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
             let postComment = ["comment": displayComment]
             postRef.updateChildValues(postComment)
             } else {
-                let displayComment = submitName + ":" + commentEditTextField.text!
+                // let displayComment = submitName + ":" + commentEditTextField.text!
+                displayComment = [submitName + ":" + commentEditTextField.text! + "\n"]
                 let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
                 let postComment = ["comment": displayComment]
                 postRef.updateChildValues(postComment)
