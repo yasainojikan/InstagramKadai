@@ -15,7 +15,7 @@ class commentViewController: UIViewController {
     
     var postData: PostData!
     
-    var displayComment: [String] = []
+    var displayComment: [String?] = []
     
     @IBOutlet weak var commentEditTextField: UITextField!
     
@@ -34,20 +34,25 @@ class commentViewController: UIViewController {
         if commentEditTextField.text != "" {
             let submitName = Auth.auth().currentUser!.displayName!
             if postData.comment.isEmpty == false {
-            // let displayComment =  postData.comment! + "\n" + submitName + ":" + commentEditTextField.text!
-                displayComment.append("\(submitName + ":" + commentEditTextField.text!)" + "\n")
-            let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
-            let postComment = ["comment": displayComment]
-            postRef.updateChildValues(postComment)
-            } else {
-                // let displayComment = submitName + ":" + commentEditTextField.text!
-                displayComment = [submitName + ":" + commentEditTextField.text! + "\n"]
+                // let displayComment =  postData.comment! + "\n" + submitName + ":" + commentEditTextField.text!
+                displayComment = postData.comment
+                let savedComment: String = submitName + ":" + commentEditTextField.text! + "\n"
+                displayComment.append(savedComment)
                 let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
                 let postComment = ["comment": displayComment]
                 postRef.updateChildValues(postComment)
+                print("\(displayComment)")
+            } else {
+                // let displayComment = submitName + ":" + commentEditTextField.text!
+                let savedComment: String = submitName + ":" + commentEditTextField.text! + "\n"
+                displayComment = [savedComment]
+                let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
+                let postComment = ["comment": displayComment]
+                postRef.updateChildValues(postComment)
+                print("emptyです")
             }
             dismiss(animated: true, completion: nil)
-            print("コメントを保存しました")
+            
         } else {
             dismiss(animated: true, completion: nil)
             print("空です")

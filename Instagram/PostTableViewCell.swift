@@ -52,13 +52,17 @@ class PostTableViewCell: UITableViewCell {
             self.likeButton.setImage(buttonImage, for: .normal)
         }
         
-        let comment = postData.comment
-        if comment.isEmpty == true {
+        // combinedCommentで結合したコメントを作成する
+        let comments = postData.comment
+        if comments.isEmpty == true {
             commentLabel.text = nil
         } else {
-            for i in comment {
-                commentLabel.text = comment[i]
+            var combinedComment = ""
+            for allComment in comments {
+                print(allComment)                
+                combinedComment += allComment
             }
+            commentLabel.text = combinedComment
         }
     }
 }
